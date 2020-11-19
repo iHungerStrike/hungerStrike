@@ -18,10 +18,10 @@ function Navbar(){
   return(
     <div>
       <header className="load">
-        <Link to='./' className="logo float-left">
+        <Link to='./' className="logo">
           <img src={Logo} />
         </Link>
-      <div className="hamburger float-right">
+      <div className="hamburger">
         <div className="nav-icon" onClick={() => setShowMenu(true)}>
           <span />
           <span />
