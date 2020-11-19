@@ -2,7 +2,7 @@ import React from 'react'
 
 const Homepage = () => {
     return (
-        <div>
+        <div height="12000px">
             Homepage
         </div>
     )
