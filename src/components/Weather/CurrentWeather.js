@@ -13,7 +13,6 @@ import CurrentWeatherTemplate from './CurrentWeatherTemplate';
 const apiKey = '6c34f050a44b39df328185e4b916581a';
 
 
-
 const CurrentWeather = () => {
     const [currentLocation, setCurrentLocation] = React.useState({});
     const [currentWeather, setCurrentWeather] = React.useState([]);
