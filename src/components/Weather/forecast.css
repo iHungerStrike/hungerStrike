@@ -1,0 +1,39 @@
+.current-location{
+  margin-top:500px;
+  margin-bottom: 50px;
+}
+
+.weather-container{
+  display: grid;
+}
+
+.week-container{
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(8, 12%);
+  width: 80vw;
+  height: 250px;
+  background-color: #eee;
+  opacity: .5;
+  border: solid #ffffff;
+  box-shadow: 4px 3px 10px 5px #999;
+  margin: 0;
+  border-radius: 3px;
+  justify-content: center;
+  margin-bottom: 100px;
+
+}
+
+.day-card{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.temp{
+  display: flex;
+}
+
+.weather{
+  background-color: #555
+}

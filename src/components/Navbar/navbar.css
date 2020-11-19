@@ -15,12 +15,11 @@ body {
 
 /* -----------  Start of header / burger menu -----------  */
 header {
-  box-sizing: border-box;
   position: fixed;
-  width: 100%;
+  width: 92%;
   top: 0;
   z-index: 20;
-  padding: 40px;
+  padding: 60px;
 }
 
 .navbar{
@@ -32,14 +31,12 @@ header .logo img {
   vertical-align: middle;
 }
 
-.load{
-  display: flex;
-  justify-content: space-between;
-  /* width: 100%; */
+.float-left {
+  float: left!important;
 }
 
 .nav-icon{
-    justify-self:right;
+  float: right;
     width: 35px;
     height: 18px;
     position: relative;
@@ -73,6 +70,10 @@ header .logo img {
   transform-origin: left center;
   width: 60%;
   right: 0 !important;
+}
+
+#span-two {
+  width: 100%;
 }
 
 /* -----------  End of Header/ Burger Menu  -----------   */
@@ -122,6 +123,7 @@ header .logo img {
   backface-visibility: hidden;
   text-align: center;
   transition: all 1000ms ease;
+  box-sizing: border-box;
 }
 
 ul{

@@ -1,10 +1,13 @@
 import React from 'react';
 import CurrentWeather from './CurrentWeather';
+import Forecast from './Forecast';
+import './forecast.css'
 
 const Weather = () => {
     return (
-        <div>
-            <CurrentWeather />
+        <div className="weather">
+            {/* <CurrentWeather /> */}
+            <Forecast />
         </div>
     )
 }

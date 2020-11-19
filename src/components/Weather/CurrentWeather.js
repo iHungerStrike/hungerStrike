@@ -17,6 +17,7 @@ const apiKey = '6c34f050a44b39df328185e4b916581a';
 const CurrentWeather = () => {
     const [currentLocation, setCurrentLocation] = React.useState({});
     const [currentWeather, setCurrentWeather] = React.useState([]);
+    
     const handleLocationInput = (event) => {
         const name = event.target.name;
         const value = event.target.value;
