@@ -28,7 +28,7 @@
     height: 100%;
     width: 20vw;
     list-style: none;
-    margin-top: -100px;
+    margin-top: -80px;
     margin-left: 20px;
 
 }
@@ -76,3 +76,20 @@
     box-shadow: 1px 1px 11px 1px #20323b;
     color: #c2f3f0;
   }
+.IconBack{
+    margin-bottom: 20px;
+}
+.CardDetails{
+  grid-area: Cards;
+  width: 450px;
+  height: 450px;
+  box-shadow: 1px 1px 11px 1px #3d3a2a;
+  background-color: #20323b;
+  color: #fff;
+  border-radius: 3px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 50px;
+}
