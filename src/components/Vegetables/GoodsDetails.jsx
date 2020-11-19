@@ -13,16 +13,15 @@ const GoodsDetails = () => {
 
   return (
     <div>
-      <h1>List</h1>
       {goods.map((good) => (
         <div key={good.id}>
           <h2>{good.name}</h2>
-          <img src={good.image} alt={good.name} width={250} height={200} />
-          <p>Species: {good.species}</p>
-          <p>Cultivation</p>
-          <p>Season: {good.cultivation.season}</p>
-          <p>Growth: {good.cultivation.growth}</p>
-          <p>Harvest: {good.cultivation.harvest}</p>
+          <img src={good.image} alt={good.name} width={450} height={400} />
+          <p><strong>Species:</strong> {good.species}</p>
+          <p><strong>Cultivation</strong></p>
+          <p><strong>Season: </strong>{good.cultivation.season}</p>
+          <p><strong>Growth:</strong> {good.cultivation.growth}</p>
+          <p><strong>Harvest:</strong> {good.cultivation.harvest}</p>
         </div>
       ))}
     </div>
