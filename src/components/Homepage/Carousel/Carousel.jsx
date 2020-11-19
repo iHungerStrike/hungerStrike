@@ -10,13 +10,13 @@ export default function Header() {
     const imageCarousel = [Fishing, Farming, Land]
 
     let carouselItem = imageCarousel.map((element) => (
-      <Carousel.Item className="carousel">
-        <img className="d-block w-100 " style={{margin: 100, height:500}} src={element} alt={element} />
+      <Carousel.Item className="carousel" >
+        <img className="d-block w-100 " style={{height:500}} src={element} alt={element} />
       </Carousel.Item>
     ));
   
     return (
-      <div style={{height:500, width:750}}>
+      <div style={{margin:50}}>
         <Carousel interval={3000}>{carouselItem}</Carousel>
       </div>
     );
