@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import VegeCarousel from './Carousel/Carousel'
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
 
@@ -95,6 +96,7 @@ const Goods = () => {
 
   return (
     <div>
+      <VegeCarousel />
       <h1>List</h1>
       {goods.map((good) => (
         <div key={good.id}>
