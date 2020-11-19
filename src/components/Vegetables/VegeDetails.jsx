@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
+
 
 const VegeDetails = () => {
   const [goods, setGoods] = useState([]);
@@ -9,9 +11,10 @@ const VegeDetails = () => {
       .get(`https://run.mocky.io/v3/9921d2a2-7077-4a2a-9fd2-747000d6ca76`)
       .then((response) => setGoods(response.data.results));
   }, []);
-
+  
   return (
     <div>
+      <Link></Link>
       {goods.map((good) => (
         <div key={good.id}>
           <h2>{good.name}</h2>

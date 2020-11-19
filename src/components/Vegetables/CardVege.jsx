@@ -1,7 +1,5 @@
 import React from 'react'
 import './styles.css'
-import { Link } from 'react-router-dom';
-
 
 // export default class Game extends React.Component {
 function CardVege (props){
