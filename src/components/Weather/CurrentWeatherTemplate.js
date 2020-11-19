@@ -2,12 +2,13 @@ import React from 'react';
 
 const CurrentWeatherTemplate = (props) => {
     const { temp, temp_min, temp_max, cityName, description, icon } = props;
+    console.log(`../../icons/${icon}`)
     return (
         <div className='container'>
             <div className='cards'>
                 <h1>{cityName}</h1>
                 <h5 className='py-4'>
-                <img src={icon} alt={description}/>
+                <img src={icon && require(`../../icons/${icon}`)} alt={description}/>
                 </h5>
                 <h1 className='py-2'>{temp}&deg;</h1>
                 <h3>
