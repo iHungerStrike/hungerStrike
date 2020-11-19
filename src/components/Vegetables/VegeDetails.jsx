@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const GoodsDetails = () => {
+const VegeDetails = () => {
   const [goods, setGoods] = useState([]);
 
   useEffect(() => {
     axios
       .get(`https://run.mocky.io/v3/9921d2a2-7077-4a2a-9fd2-747000d6ca76`)
-      .then((response) => response.data.results)
-      .then((data) => setGoods(data));
+      .then((response) => setGoods(response.data.results));
   }, []);
 
   return (
@@ -28,4 +27,4 @@ const GoodsDetails = () => {
   );
 };
 
-export default GoodsDetails;
+export default VegeDetails;

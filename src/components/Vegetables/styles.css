@@ -1,5 +1,24 @@
+.ContentGridVege{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "Container Cards Cards Cards"
+    "Container Cards Cards Cards"
+    "Container Cards Cards Cards"
+    "Container Cards Cards Cards"
+
+    ;
+}
+.Carousel{
+    grid-area: Carousel;
+    grid-column-start: 1;
+    grid-column-end:4;
+
+}
 .Container{
-    display:flex;
+    display:grid;
+    grid-area: Container;
     justify-content: center;
     text-align: center;
     flex-flow: column nowrap;
@@ -7,25 +26,53 @@
     opacity: 0.85;
     position: relative;
     height: 100%;
-    width: 15vw;
+    width: 20vw;
     list-style: none;
     margin-top: -100px;
     margin-left: 20px;
 
 }
-
 .Content{
     justify-content: center;
     margin-top: 20px;
     list-style: none;
     color: #fff;
     position: relative;
-    margin-top:0;
+    margin-right:30px;
     padding:10px;
+    font-size: 1.5em;
 }
-.Content a:hover { 
-    background: #85CCAC;
-    height:50px;
-    border-radius:20px;
-    box-shadow: 6px 5px 11px rgba(51,54,66,.9);
-} 
+
+.grid{
+  grid-area: Cards;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  margin: 10px;
+ 
+}
+.card{
+  width: 275px;
+  height: 245px;
+  box-shadow: 1px 1px 11px 1px #3d3a2a;
+  background-color: #20323b;
+  color: #fff;
+  border-radius: 3px;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.card img{
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+
+
+}
+.card:hover {
+    transition: ease-in-out 1.5s;
+    background-color: #1C8957;
+    box-shadow: 1px 1px 11px 1px #20323b;
+    color: #c2f3f0;
+  }

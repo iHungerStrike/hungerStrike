@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import Farm from "./imgCarousel/farm.jpg";
 import Wheat from "./imgCarousel/QualifiedElatedChanticleer-size_restricted.gif";
 import Land from "./imgCarousel/product.jpg";
+import '../styles.css'
 
 export default function VegeCarousel() {
 
@@ -11,7 +12,7 @@ export default function VegeCarousel() {
 
     let carouselItem = imageCarousel.map((element) => (
       
-      <Carousel.Item className="carousel" >
+      <Carousel.Item className="Carousel" >
         <img className="d-block w-100 " style={{height:'55vh', padding:20}} src={element} alt={element} />
       </Carousel.Item>
     

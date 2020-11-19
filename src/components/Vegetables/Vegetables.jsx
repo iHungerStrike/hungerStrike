@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import VegeCarousel from "./Carousel/Carousel";
-import GoodsDetails from './GoodsDetails';
+import CardVege from "./CardVege"
+// import GoodsDetails from './GoodsDetails';
 import './styles.css';
 import { NavLink as Link } from "react-router-dom";
 
-const Goods = ({handleClick}) => {
+const Goods = () => {
   const [goods, setGoods] = useState([]);
-  const [currentSelected, setCurrentSelected] = useState();
+  // const [currentSelected, setCurrentSelected] = useState();
+
 
   useEffect(() => {
     axios
@@ -16,28 +18,37 @@ const Goods = ({handleClick}) => {
       .then((data) => setGoods(data));
   }, []);
 
-  function handleClick(index) {
-    // console.log(index);
-    setCurrentSelected(index);
-  }
+  // function handleClick(index) {
+  //   // console.log(index);
+  //   setCurrentSelected(index);
+  // }
+
 
   return (
     <div>
       <VegeCarousel />
-      <h1>Products</h1>
-      <ul className="Container">
-        {goods.map((good) => (
-           <Link to={`/vegetables/${good.name}`} 
-           >
-            <li onClick={() => {
-            const index = good.filter((element) => element.id === good.id);
-            handleClick(index);
-          }} className="Content">{good.name}</li>
-            </Link>
-        ))}
-      </ul>
-      <GoodsDetails handleClick={handleClick} />
-    </div>
+    <div className="ContentGridVege">
+        <ul className="Container">
+          {goods.map((good) => (
+            <Link to={`/vegetables/${good.name}`} 
+            >
+              <li 
+            //   onClick={() => {
+            //   const index = good.filter((element) => element.id === good.id);
+            //   handleClick(index);
+            // }} 
+            className="Content">{good.name}</li>
+              </Link>
+          ))}
+        </ul>
+      <div className="grid">
+        {goods.map((good)=> (
+                <CardVege {...good} />
+                ))}
+      </div>
+      {/* <GoodsDetails handleClick={handleClick} /> */}
+  </div>
+  </div>
   );
 };
 
