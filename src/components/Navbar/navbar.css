@@ -9,18 +9,31 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #292b2c;
+  color: #060607;
   background-color: #fff;
 }
 
 /* -----------  Start of header / burger menu -----------  */
 header {
-  box-sizing: border-box;
-  position: fixed;
-  width: 100%;
+  /* position: sticky; */
+  /* width: 100%; */
+  /* top: 0; */
+    position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  z-index: 20;
-  padding: 40px;
+  /* z-index: 20; */
+  padding: 0px;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.full-nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  padding: 50px;
+  background: transparent;
 }
 
 .navbar{
@@ -32,14 +45,12 @@ header .logo img {
   vertical-align: middle;
 }
 
-.load{
-  display: flex;
-  justify-content: space-between;
-  /* width: 100%; */
+.float-left {
+  float: left!important;
 }
 
 .nav-icon{
-    justify-self:right;
+  float: right;
     width: 35px;
     height: 18px;
     position: relative;
@@ -53,7 +64,7 @@ header .logo img {
     position: absolute;
     height: 5px;
     width: 100%;
-    background: #333;
+    background: rgb(34, 34, 34);
     opacity: 1;
     transition: .25s ease-in-out;
     border-radius: 3px 0px 0px 3px;
@@ -75,13 +86,17 @@ header .logo img {
   right: 0 !important;
 }
 
+#span-two {
+  width: 100%;
+}
+
 /* -----------  End of Header/ Burger Menu  -----------   */
 
 /* -----------  Start of Nav Menu  -----------   */
 
 #full-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 1;
   padding: 0;
   left: 0;
   top: 0;
@@ -99,6 +114,7 @@ header .logo img {
   justify-content: center;
   align-items: center;
   transition: all 1000ms ease;
+  
 }
 
 .menu-container {
@@ -122,6 +138,7 @@ header .logo img {
   backface-visibility: hidden;
   text-align: center;
   transition: all 1000ms ease;
+  box-sizing: border-box;
 }
 
 ul{
