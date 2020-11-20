@@ -17,7 +17,6 @@ const Goods = () => {
   }, []);
 
   return (
-    <>
        
       <div className="grid">
         {goods.map((good)=> (
@@ -26,7 +25,6 @@ const Goods = () => {
             </Link>
                 ))}
         </div>
-  </>
   );
 };
 

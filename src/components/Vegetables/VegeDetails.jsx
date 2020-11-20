@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import "./styles.css";
-import {Container, Row, Col} from "react-bootstrap"
+import {Container, Row, Col, Card} from "react-bootstrap"
 
 const VegeDetails = (props) => {
   // const [goods, setGoods] = useState([]);
@@ -45,13 +45,14 @@ const VegeDetails = (props) => {
 
   return (
     <Container className="Vege-details">
-      <Row>
-      <Col sm={4} className="IconBack">
+      <Row className='ml-5' >
+      <Col className="IconBack">
         <Link to={`/vegetables`}>
           <ArrowBack fontSize="large" /> Go Back to List
         </Link>
       </Col>
-      <Col xs={12} md={8} className="CardDetails">
+      <Col className="CardDetails">
+      <div>
         <div key={good.id}>
           <h2>{good.name}</h2>
           <img src={good.image} alt={good.name}/>
@@ -70,6 +71,7 @@ const VegeDetails = (props) => {
             </p>
             <p><strong>Harvest:</strong> {good.harvest}</p>
           </div>
+        </div>
         </div>
       </Col>
       </Row>
