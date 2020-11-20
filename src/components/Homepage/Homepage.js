@@ -3,7 +3,7 @@ import Carousel from './Carousel/Carousel'
 
 const Homepage = () => {
     return (
-        <div>
+        <div height="12000px">
             Homepage
             <Carousel />
         </div>
