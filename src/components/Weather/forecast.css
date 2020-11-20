@@ -35,10 +35,8 @@
   flex-direction: column;
   text-align: left;
   border-left: solid #222 .2px;
-  padding-left: 20px;
+  padding-left: 30px;
 }
-
-
 
 .solid-text{
   -webkit-text-stroke: .1px #fff;
