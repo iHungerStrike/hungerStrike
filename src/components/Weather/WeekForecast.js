@@ -4,9 +4,11 @@ import './forecast.css'
 const WeekForecast = (props) => {
   console.log(props)
 
+  const days = ["Today", "Tomorrow", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+
   return(
     <div className="day-card">
-      <div>icon</div>
+      <h6>{days[props.index]}</h6>
       <div classNmae="temp">
       <b className="solid-text">&#x2600; {props.temp.day}&deg;</b><br />
       <span className="solid-text">  &#x263E; {props.temp.eve}&deg;</span>

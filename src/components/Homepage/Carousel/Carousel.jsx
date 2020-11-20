@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import Farming from "./imgCarousel/cultures.jpg";
 import Fishing from "./imgCarousel/fishing2.jpg";
 import Land from "./imgCarousel/cows3.jpg";
+import "./carousel.css"
 
 export default function Header() {
 

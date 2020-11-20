@@ -4,7 +4,7 @@ import Carousel from './Carousel/Carousel'
 const Homepage = () => {
     return (
         <div height="12000px">
-            Homepage
+            <h1>Welcome farmers!</h1>
             <Carousel />
         </div>
     )

@@ -139,7 +139,6 @@ const CurrentWeather = () => {
                 )
               })}
           </Container>
-          <button value= "Weather this week" >Weather this week</button>
           <Container className='mt-5'>
             <Forecast lon={lon} lat={lat} />
           </Container>

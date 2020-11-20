@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
     return (
-        <div class="row" style={{ bottom: '0', width: '100vw', position: 'absolute', height: '42vh', display: 'flex', justifyContent: 'center', backgroundColor: 'whitesmoke', marginLeft: '2px' }}>
+        <div class="row" style={{ bottom: '0', width: '100vw', position: 'relative', height: '42vh', display: 'flex', justifyContent: 'center', backgroundColor: 'whitesmoke', marginLeft: '2px' }}>
             <div class="col-6 col-md-4 col-sm-12 text-center mt-2">
                 <h4>About Us</h4>
                 <p>Three peaceful Wilders aiming to make XIV century Europe a better place by providing priceless tips on agriculture and weather so farmers can grow their crops, fruits and vegetables with great efficiency.</p>
