@@ -11,7 +11,7 @@ const Goods = () => {
   
   useEffect(() => {
     axios
-      .get(`https://run.mocky.io/v3/9921d2a2-7077-4a2a-9fd2-747000d6ca76`)
+      .get(`https://run.mocky.io/v3/fa107af3-65bc-406c-830e-1003fd542f0c`)
       .then((response) => setGoods(response.data.results))
 
   }, []);
@@ -22,7 +22,7 @@ const Goods = () => {
       <div className="grid">
         {goods.map((good)=> (
           <Link to={`/vegetables/${good.id}`}>
-                <CardVege {...good} />
+                <CardVege key={good.id} {...good} />
             </Link>
                 ))}
         </div>

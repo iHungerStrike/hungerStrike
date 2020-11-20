@@ -13,7 +13,7 @@ const MainVege = () => {
 
   useEffect(() => {
     axios
-      .get(`https://run.mocky.io/v3/9921d2a2-7077-4a2a-9fd2-747000d6ca76`)
+      .get(`https://run.mocky.io/v3/fa107af3-65bc-406c-830e-1003fd542f0c`)
       .then((response) => setGoods(response.data.results));
   }, []);
 
@@ -30,7 +30,7 @@ const MainVege = () => {
           <ul className="Container">
             {goods.map((good) => (
               <Link to={`/vegetables/${good.id}`}>
-                <li className="Content">{good.name}</li>
+                <li key={good.id} className="Content">{good.name}</li>
               </Link>
             ))}
           </ul>

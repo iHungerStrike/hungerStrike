@@ -1,99 +1,85 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import "./styles.css";
+import {Container, Row, Col} from "react-bootstrap"
 
-// const VegeDetails = (props) => {
-//   // const [goods, setGoods] = useState([]);
-//   const [goodId, setGoodsId] = useState([]);
+const VegeDetails = (props) => {
+  // const [goods, setGoods] = useState([]);
+  const [good, setGoodsId] = useState([]);
 
-//   useEffect(() => {
-//     axios
-//       .get(`https://run.mocky.io/v3/9921d2a2-7077-4a2a-9fd2-747000d6ca76`)
-//       .then(response =>
-//         {
-
-//             // console.log(props.match.params.id)
-//             const selectId = Number(props.match.params.id);
-
-//             console.log(selectId)
-
-//           const good = response.data.results.filter((good) => good.id === selectId)
-//             // good.id === selectId)
-
-//             console.log('good', good[0])
-
-//             setGoodsId(good[0]);
-
-//         })
-
-//   }, []);
-class VegeDetails extends Component {
-  state = {
-    good: {},
-  };
-  componentDidMount() {
-    this.fetchGoods();
-  }
-
-  componentDidUpdate(prevProps) {
-    // console.log('previous', prevProps.match.params.id)
-    if (prevProps.match.params.id !== this.props.match.params.id) {
-      const id = this.props.match.params.id;
-      this.fetchGoods(id);
-    }
-  }
-
-  fetchGoods = () => {
+  useEffect(() => {
     axios
-      .get(`https://run.mocky.io/v3/ba90f131-a361-44b0-84ce-e0fbe686e6c6`)
+      .get(`https://run.mocky.io/v3/fa107af3-65bc-406c-830e-1003fd542f0c`)
       .then((response) => {
-        // console.log(response)
-        // console.log(this.props.match.params.id)
-        const selectId = Number(this.props.match.params.id);
-        // console.log(selectId)
+        console.log(props.match);
+        const selectId = Number(props.match.params.id);
+
+        console.log(selectId);
+
         const good = response.data.results.filter(
           (good) => good.id === selectId
         );
-        this.setState({ good: good[0] });
-        // console.log('good', good[0])
-      });
-  };
+        // good.id === selectId)
 
-  render() {
-    return (
-      <div>
-        <div className="IconBack">
-          <Link to={`/vegetables`}>
-            <ArrowBack fontSize="large" /> Go Back to List
-          </Link>
-        </div>
-        <div className="CardDetails">
-          <div key={this.state.good.id}>
-            <h2>{this.state.good.name}</h2>
-            <img
-              src={this.state.good.image}
-              alt={this.state.good.name}
-              width={250}
-              height={200}
-            />
-            <div className="CardContent">
+        console.log("good", good[0]);
+
+        setGoodsId(good[0]);
+      });
+  }, [props.match]);
+
+  useEffect(() => {
+    window.scrollTo(250, 250)
+  }, [props.match])
+  // useEffect(() => {
+  //   const selectSpecs =
+  // }, [])
+  // class VegeDetails extends Component {
+  //   state = {
+  //     good: {},
+  //   };
+  //   componentDidMount() {
+  //     this.fetchGoods();
+  //   }
+
+  return (
+    <Container className="Vege-details">
+      <Row>
+      <Col sm={4} className="IconBack">
+        <Link to={`/vegetables`}>
+          <ArrowBack fontSize="large" /> Go Back to List
+        </Link>
+      </Col>
+      <Col xs={12} md={8} className="CardDetails">
+        <div key={good.id}>
+          <h2>{good.name}</h2>
+          <img src={good.image} alt={good.name}/>
+          <div className="CardContent">
             <p>
-              <strong>Species:</strong> {this.state.good.species}
+              <strong>Species:</strong> {good.species}
             </p>
             <p>
-              <strong>Growth:</strong> {this.state.good.growth} 
+              <strong>Growth:</strong> {good.growth}
             </p>
             <p>
-              <strong>Season: </strong>{this.state.good.season} &nbsp;&nbsp; - &nbsp;&nbsp;   <strong>Harvest:</strong> {this.state.good.harvest}
+              <strong>Season: </strong>
+              {good.season}
+               {/* &nbsp;&nbsp; - &nbsp;&nbsp;{" "} */}
+              
             </p>
-            </div>
+            <p><strong>Harvest:</strong> {good.harvest}</p>
           </div>
         </div>
-      </div>
-    );
-  }
-}
+      </Col>
+      </Row>
+      {/* <div>
+          map cards with same species
+          {good.map((species)=> good.species === selectSpecs)}
+        </div> */}
+    </Container>
+  );
+};
+// }
 
 export default VegeDetails;

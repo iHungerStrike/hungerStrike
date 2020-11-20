@@ -13,7 +13,7 @@ export default function VegeCarousel() {
     let carouselItem = imageCarousel.map((element) => (
       
       <Carousel.Item className="Carousel" >
-        <img className="d-block w-100 " style={{height:'55vh', padding:20}} src={element} alt={element} />
+        <img key={element.name} className="d-block w-100 " style={{height:'55vh', padding:20}} src={element} alt={element} />
       </Carousel.Item>
     
     ));
