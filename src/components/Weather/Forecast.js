@@ -14,7 +14,8 @@ const Forecast = (props) => {
         .then(response => setForecast(response.data.daily))
       }
   
-  React.useEffect(() => fetchForecast, [])
+  React.useEffect(() => 
+    fetchForecast, [])
 
   return(
     <div className="weather-container">
