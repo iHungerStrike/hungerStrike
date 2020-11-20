@@ -1,0 +1,174 @@
+/* @import url('./cross.svg'); */
+
+html{
+  height:100vh;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #060607;
+  background-color: #fff;
+}
+
+/* -----------  Start of header / burger menu -----------  */
+header {
+  /* position: sticky; */
+  /* width: 100%; */
+  /* top: 0; */
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* z-index: 20; */
+  padding: 0px;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.full-nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  padding: 50px;
+  background: transparent;
+}
+
+.navbar{
+  padding:60px;
+}
+
+header .logo img {
+  max-height: 26px;
+  vertical-align: middle;
+}
+
+.float-left {
+  float: left!important;
+}
+
+.nav-icon{
+  float: right;
+    width: 35px;
+    height: 18px;
+    position: relative;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    transform: rotate(0deg);
+}
+
+.nav-icon span{
+  display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: rgb(34, 34, 34);
+    opacity: 1;
+    transition: .25s ease-in-out;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.nav-icon span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.nav-icon:hover span:nth-child(2){
+  width: 100%;
+}
+
+.nav-icon span:nth-child(2) {
+  top: 8px;
+  transform-origin: left center;
+  width: 60%;
+  right: 0 !important;
+}
+
+#span-two {
+  width: 100%;
+}
+
+/* -----------  End of Header/ Burger Menu  -----------   */
+
+/* -----------  Start of Nav Menu  -----------   */
+
+#full-menu {
+  position: fixed;
+  z-index: 999;
+  padding: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  display: none;
+  overflow: hidden;
+  background: #000;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  cursor: url(./cross.png), not-allowed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1000ms ease;
+  
+}
+
+.menu-container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  cursor: url(./cross.png), not-allowed;
+  transition: all 1000ms ease;
+}
+
+.menu-holder{
+  cursor: url(./cross.png), not-allowed;
+  transition: all 1000ms ease;
+}
+
+.navmenu {
+  list-style: none;
+  margin: 0;
+  clear: left;
+  backface-visibility: hidden;
+  text-align: center;
+  transition: all 1000ms ease;
+  box-sizing: border-box;
+}
+
+ul{
+  display: block;
+}
+
+.navmenu > li {
+  display: block;
+  position: relative;
+  margin: 0;
+}
+
+.navmenu > li > a {
+  display: inline;
+  font-size: 36px;
+  line-height: 70px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 500ms ease;
+  letter-spacing: 1px;
+  width: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.navmenu > li > a:hover {
+  opacity: .5;
+  font-size: 40px;
+  transition: all 500ms ease;
+}
+
+
+/* -----------  End of Nav Menu  -----------   */

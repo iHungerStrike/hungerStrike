@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Homepage from "./components/Homepage/Homepage";
+import Weather from "./components/Weather/Weather";
+import MainVege from "./components/Vegetables/MainVege"
+import { Switch, Route, Redirect } from "react-router-dom";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route path="/weather" component={Weather} />
+        <Route path="/vegetables" component={MainVege} />
+        <Redirect to="/" component={Homepage} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
