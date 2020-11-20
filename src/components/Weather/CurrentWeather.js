@@ -10,6 +10,7 @@ import bgdefault from './videos/defaultbg.jpg';
 import CurrentWeatherTemplate from './CurrentWeatherTemplate';
 import { Container, Col, Row } from 'react-bootstrap';
 import './CurrentWeather.css';
+import Forecast from './Forecast'
 
 // API call: http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}
 
@@ -19,11 +20,12 @@ const apiKey = '6c34f050a44b39df328185e4b916581a';
 const CurrentWeather = () => {
     const [currentLocation, setCurrentLocation] = React.useState({});
     const [currentWeather, setCurrentWeather] = React.useState([]);
+    const [lon, setLon] = React.useState()
+    const [lat, setLat] = React.useState()
     
     const handleLocationInput = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        // console.log('name: ', name, 'value: ', value)
         setCurrentLocation((prevState) => ({ ...prevState, [name]: value }));
     }
     
@@ -65,11 +67,12 @@ const CurrentWeather = () => {
       // console.log(currentLocation.city)
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${currentLocation.city}&units=metric&appid=${apiKey}`)
           .then(response => {
-            // console.log(response.data)
             let temperature = response.data.main;
             let weather = response.data.weather[0];
             let tempWeather = Object.assign(temperature, weather);
-            // console.log(tempWeather)
+            setLon(response.data.coord.lon);
+            setLat(response.data.coord.lat);
+            console.log(tempWeather)
 
               if(currentLocation.city !== ''){
                   let permaWeather = Object.assign(tempWeather, getIcon(tempWeather), currentLocation);
@@ -135,6 +138,10 @@ const CurrentWeather = () => {
                     </div>
                 )
               })}
+          </Container>
+          <button value= "Weather this week" >Weather this week</button>
+          <Container className='mt-5'>
+            <Forecast lon={lon} lat={lat} />
           </Container>
         </div>
     )

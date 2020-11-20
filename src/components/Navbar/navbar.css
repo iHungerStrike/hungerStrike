@@ -96,7 +96,7 @@ header .logo img {
 
 #full-menu {
   position: fixed;
-  z-index: 999;
+  z-index: 1;
   padding: 0;
   left: 0;
   top: 0;
@@ -114,6 +114,7 @@ header .logo img {
   justify-content: center;
   align-items: center;
   transition: all 1000ms ease;
+  
 }
 
 .menu-container {

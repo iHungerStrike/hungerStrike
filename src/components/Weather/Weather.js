@@ -8,7 +8,6 @@ const Weather = () => {
     return (
         <div className="weather">
             <CurrentWeather />
-            {/* <Forecast /> */}
         </div>
     )
 }
