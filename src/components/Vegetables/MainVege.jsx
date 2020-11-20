@@ -5,6 +5,8 @@ import { NavLink as Link, Switch, Route, Redirect } from "react-router-dom";
 import axios from "axios";
 import VegeCarousel from "./Carousel/Carousel";
 import "./styles.css";
+import HomeIcon from "@material-ui/icons/Home";
+
 
 const MainVege = () => {
   const [goods, setGoods] = useState([]);
@@ -19,6 +21,11 @@ const MainVege = () => {
     <div>
       <div>
         <VegeCarousel />
+          <div className="IconHome">
+          <Link to={`/`}>
+            <HomeIcon fontSize="large" /> Home
+          </Link>
+          </div>
         <div className="ContentGridVege">
           <ul className="Container">
             {goods.map((good) => (

@@ -40,7 +40,8 @@
     position: relative;
     margin-right:30px;
     padding:10px;
-    font-size: 1.5em;
+    font-size: 1.8em;
+    margin-bottom:12px;
 }
 
 .grid{
@@ -77,12 +78,19 @@
     color: #c2f3f0;
   }
 .IconBack{
+    grid-area: Container;
+    margin-left: 90px;
     margin-bottom: 20px;
+}
+.IconHome{
+    grid-area: Container;
+    margin-bottom: 20px;
+
 }
 .CardDetails{
   grid-area: Cards;
   width: 450px;
-  height: 450px;
+  height: 400px;
   box-shadow: 1px 1px 11px 1px #3d3a2a;
   background-color: #20323b;
   color: #fff;
@@ -91,5 +99,11 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  margin: 0 50px;
+  margin-left: 400px;
+}
+.CardContent{
+    font-size: 1.2em;
+    margin-top:10px;
+    justify-content: center;
+    align-items: center;
 }

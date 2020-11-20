@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CardVege from "./CardVege"
+import { NavLink as Link} from "react-router-dom";
+
 
 import './styles.css';
 
@@ -15,11 +17,16 @@ const Goods = () => {
   }, []);
 
   return (
+    <>
+       
       <div className="grid">
         {goods.map((good)=> (
+          <Link to={`/vegetables/${good.id}`}>
                 <CardVege {...good} />
+            </Link>
                 ))}
         </div>
+  </>
   );
 };
 

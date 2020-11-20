@@ -2,8 +2,8 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
 import Farm from "./imgCarousel/farm.jpg";
-import Wheat from "./imgCarousel/QualifiedElatedChanticleer-size_restricted.gif";
-import Land from "./imgCarousel/product.jpg";
+import Wheat from "./imgCarousel/wheat.jpg";
+import Land from "./imgCarousel/maxresdefault.jpg";
 import '../styles.css'
 
 export default function VegeCarousel() {
