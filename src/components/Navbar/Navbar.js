@@ -33,13 +33,13 @@ function Navbar(){
         <div class="menu-holder">
             <ul class="navmenu">
                 <li>
-                    <Link to="./">Home</Link>
+                    <Link exact path to="/">Home</Link>
                 </li>
                 <li >
-                    <Link to="./weather">Weather</Link>
+                    <Link to="/weather">Weather</Link>
                 </li>
                 <li >
-                    <Link to="./vegetables">Vegetables</Link>
+                    <Link to="/vegetables">Vegetables</Link>
                 </li>
             </ul>                 
         </div>
