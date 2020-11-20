@@ -29,10 +29,10 @@ const CurrentWeatherTemplate = (props) => {
                 <i className={icon} alt={description}/>
                 </h1>
                 <h1 className='py-2'>{Number(temp).toFixed(1)}&deg;</h1>
-                <h3>
-                    <span className='px-4'>{Number(temp_min).toFixed(1)}&deg;</span>
-                    <span className='px-4'>{Number(temp_max).toFixed(1)}&deg;</span>
-                </h3>
+                <h2>
+                    <span className='px-4 text-primary' style={{ webkitTextStroke: '1px #000000' }}>{Number(temp_min).toFixed(1)}&deg;</span>
+                    <span className='px-4 text-danger' style={{ webkitTextStroke: '1px #000000' }}>{Number(temp_max).toFixed(1)}&deg;</span>
+                </h2>
                 <h4 className='py-3'>{description.charAt(0).toUpperCase() + description.slice(1)}</h4>
             </div>
         </div>

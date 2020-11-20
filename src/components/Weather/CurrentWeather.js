@@ -8,7 +8,7 @@ import skyandcloudslapse from './videos/sky-and-clouds.mp4';
 import thunder from './videos/thunder.mp4';
 import bgdefault from './videos/defaultbg.jpg';
 import CurrentWeatherTemplate from './CurrentWeatherTemplate';
-import { Button, Container, Col, Row } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import './CurrentWeather.css';
 
 // API call: http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}
@@ -60,7 +60,8 @@ const CurrentWeather = () => {
         return icons;
   }
     // Lon Lat Call for 7 days forecast https://api.openweathermap.org/data/2.5/onecall?lat=51.51&lon=-0.13&units=metric&exclude=current,minutely,hourly&appid=6c34f050a44b39df328185e4b916581a
-    const fetchWeather = () => {
+    const fetchWeather = (event) => {
+      event.preventDefault();
       // console.log(currentLocation.city)
         axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${currentLocation.city}&units=metric&appid=${apiKey}`)
           .then(response => {
@@ -77,7 +78,7 @@ const CurrentWeather = () => {
               }
           })
           .catch((err) => {
-            alert('Please provide a valid city.');
+            alert('Please provide a valid City or Country.');
             // console.error(err.response.data);
           })
     }
@@ -99,16 +100,18 @@ const CurrentWeather = () => {
                 />
             <Row>
               <Col className='md-2'>
+                <form onSubmit={fetchWeather}>
                 <input
                   style={{
                     backgroundColor: 'transparent',
                     color: 'white',
+                    textAlign: 'center',
                     border: '0',
                     borderBottom: '2px solid whitesmoke',
                     borderRadius: '0',
                     fontSize: '20px'
                   }}
-                  placeHolder='City'
+                  placeHolder='Where are you now?'
                   className='form-control'
                   className='formz'
                   autoComplete='off'
@@ -117,10 +120,11 @@ const CurrentWeather = () => {
                   value={currentLocation.city}
                   onChange={handleLocationInput}
                 />
+                </form>
               </Col>
-              <Col className='md-2'>
+              {/* <Col className='md-2'>
                 <Button className='text-white' style={{fontSize: '20px'}} onClick={fetchWeather}>Get Weather</Button>
-              </Col>
+              </Col> */}
             </Row>  
           </Container>
           <Container className='mt-5'>
