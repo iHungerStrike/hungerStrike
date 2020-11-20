@@ -44,14 +44,14 @@ const VegeDetails = (props) => {
   //   }
 
   return (
-    <Container className="Vege-details">
-      <Row className='ml-5' >
-      <Col className="IconBack">
+    <div className="Vege-details col-12 justify-content-center">
+      <div >
+      <div className="IconBack col-12 d-flex justify-content-end">
         <Link to={`/vegetables`}>
           <ArrowBack fontSize="large" /> Go Back to List
         </Link>
-      </Col>
-      <Col className="CardDetails">
+      </div>
+      <div className="CardDetails col-12 justify-content-center">
       <div>
         <div key={good.id}>
           <h2>{good.name}</h2>
@@ -73,13 +73,13 @@ const VegeDetails = (props) => {
           </div>
         </div>
         </div>
-      </Col>
-      </Row>
+      </div>
+      </div>
       {/* <div>
           map cards with same species
           {good.map((species)=> good.species === selectSpecs)}
         </div> */}
-    </Container>
+    </div>
   );
 };
 // }
