@@ -64,7 +64,7 @@ header .logo img {
     position: absolute;
     height: 5px;
     width: 100%;
-    background: #000;
+    background: rgb(34, 34, 34);
     opacity: 1;
     transition: .25s ease-in-out;
     border-radius: 3px 0px 0px 3px;

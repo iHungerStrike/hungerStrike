@@ -15,7 +15,7 @@ const Forecast = (props) => {
       }
   
   React.useEffect(() => 
-    fetchForecast, [])
+    fetchForecast(), [props.lat, props.lon])
 
   return(
     <div className="weather-container">
