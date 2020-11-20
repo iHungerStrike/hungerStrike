@@ -16,7 +16,7 @@ function Navbar(){
   }
 
   return(
-    <div>
+    <div className="full-nav">
       <header className="load">
         <Link to='./' className="logo float-left">
           <img src={Logo} />

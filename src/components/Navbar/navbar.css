@@ -9,17 +9,31 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #292b2c;
+  color: #060607;
   background-color: #fff;
 }
 
 /* -----------  Start of header / burger menu -----------  */
 header {
-  position: fixed;
-  width: 92%;
+  /* position: sticky; */
+  /* width: 100%; */
+  /* top: 0; */
+    position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  z-index: 20;
-  padding: 60px;
+  /* z-index: 20; */
+  padding: 0px;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.full-nav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+
+  padding: 50px;
+  background: transparent;
 }
 
 .navbar{

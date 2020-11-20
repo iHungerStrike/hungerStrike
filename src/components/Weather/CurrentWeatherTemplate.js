@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'weather-icons/css/weather-icons.css';
-
 const CurrentWeatherTemplate = (props) => {
     const { temp, temp_min, temp_max, cityName, description, icon, backgrnd } = props;
     return (
@@ -12,6 +11,7 @@ const CurrentWeatherTemplate = (props) => {
                     autoPlay 
                     loop
                     muted
+                    key={backgrnd}
                     style={{
                         position: 'absolute',
                         width: '100%',
@@ -38,5 +38,4 @@ const CurrentWeatherTemplate = (props) => {
         </div>
     )
 }
-
-export default CurrentWeatherTemplate
+export default CurrentWeatherTemplate;

@@ -7,8 +7,8 @@ import 'weather-icons/css/weather-icons.css';
 const Weather = () => {
     return (
         <div className="weather">
-            {/* <CurrentWeather /> */}
-            <Forecast />
+            <CurrentWeather />
+            {/* <Forecast /> */}
         </div>
     )
 }

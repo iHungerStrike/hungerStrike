@@ -9,9 +9,11 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+    <div>
       <Navbar />
         <App />
       <Footer />
+      </div>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
