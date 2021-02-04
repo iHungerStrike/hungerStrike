@@ -3,7 +3,7 @@ import axios from 'axios';
 import './forecast.css'
 import WeekForecast from './WeekForecast';
 
-const apiKey = '6c34f050a44b39df328185e4b916581a';
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const Forecast = (props) => {
 
   const [forecast, setForecast] = React.useState([]);
