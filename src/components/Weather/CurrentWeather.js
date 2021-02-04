@@ -13,7 +13,7 @@ import './CurrentWeather.css';
 
 // API call: http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${apiKey}
 
-const apiKey = '6c34f050a44b39df328185e4b916581a';
+const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 
 
 
@@ -59,7 +59,7 @@ const CurrentWeather = () => {
         }
         return icons;
   }
-    // Lon Lat Call for 7 days forecast https://api.openweathermap.org/data/2.5/onecall?lat=51.51&lon=-0.13&units=metric&exclude=current,minutely,hourly&appid=6c34f050a44b39df328185e4b916581a
+    // Lon Lat Call for 7 days forecast https://api.openweathermap.org/data/2.5/onecall?lat=51.51&lon=-0.13&units=metric&exclude=current,minutely,hourly&appid=${apiKey}
     const fetchWeather = (event) => {
       event.preventDefault();
       // console.log(currentLocation.city)
